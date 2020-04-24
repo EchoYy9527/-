@@ -1,0 +1,52 @@
+/* 使用app.wxss中的1主题颜色 */
+/* view{ 
+  color:var(--themeColor)
+} */
+/* 轮播 */
+.index-swiper swiper{
+  width: 100%;
+  height: 340rpx;
+}
+.index-swiper swiper image{
+  width: 100%;
+}
+/* 导航 */
+.cate{
+  display: flex;
+}
+.cate navigator{
+  padding: 20rpx;
+  flex: 1;
+}
+.cate navigator image{
+  width: 100%;
+}
+/* 内容 */
+.comm{
+  height: 100%;
+}
+.comm-box{
+  height: 100%;
+}
+.comm-tit{
+  padding: 10rpx 0;
+}
+.comm-tit image{
+  width: 100%;
+}
+.content{
+  overflow: hidden;
+}
+.content navigator{
+  float: left;
+  width: 33.33%;
+}
+.content navigator image{
+  width: 100%;
+  height: 100%;
+}
+.content navigator image:nth-last-child(-n+4){
+  height: calc(33.33vw*386/232/2.1);
+  border-left: 10rpx solid #fff;
+  border-bottom: 10rpx solid #fff;
+}

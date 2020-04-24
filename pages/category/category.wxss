@@ -1,0 +1,52 @@
+page{
+  height: 100%;
+}
+.cate{
+  height: 100%;
+}
+.cate-box{
+  height: calc(100vh-90rpx);
+  display: flex;
+}
+.left-cont{
+  flex:2;
+  height: 1000rpx
+}
+.left-tit{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.active{
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.right-cont{
+  flex:5;
+  height: 1000rpx;
+}
+.right-tit{
+  font-size: 40rpx;
+  font-weight: bold;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.right-list navigator{
+  width: 33.33%;
+  text-align: center;
+}
+.right-img-box{
+  padding: 5rpx;
+  width: 100%;
+}
+.right-name{
+  text-align: center;
+}

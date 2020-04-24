@@ -1,0 +1,122 @@
+page{
+  background-color: #edece8;
+}
+.user{
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user-img{
+  position: relative;
+}
+.user-img .img-b{
+  height: 45vh;
+  /* 高斯模糊 */
+  filter: blur(5px);
+}
+.user-in{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user-icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user-name{
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 40rpx;
+}
+/* 登录按钮 */
+.user-btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:40%;
+  border: 3px solid greenyellow;
+  color: greenyellow;
+  font-size: 38rrpx;
+  padding: 30rpx;
+  border-radius: 5rpx;
+}
+/* 内容 */
+.user-cont{
+  position: relative;
+}
+.user-main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50rpx;
+}
+.history{
+  background-color: #fff;
+  display: flex;
+}
+.history navigator{
+  padding: 10rpx 0;
+  flex: 1;
+  text-align: center;
+}
+.his{
+  color: var(--themeColor);
+}
+.his-name{
+
+}
+/* 订单 */
+.order{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.order-tit{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.order-cont{
+  display: flex;
+}
+.order-cont navigator{
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+}
+.iconfont{
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+/* 地址客服 */
+.address{
+ 
+}
+.address-in{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.service{
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.service-in{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.service-in text{
+
+}
+.us{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}

@@ -1,0 +1,46 @@
+<!-- 收货地址 -->
+<view class="address">
+  <view class="add-box">
+    <view class="add-in">
+      <view>{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="add-ph">{{address.telNumber}}</view>
+  </view>
+</view>
+<!-- 购物车内容 -->
+<view class="cart-cont">
+  <view class="cart-tit">购物车</view>
+  <view class="cart-main" wx:for="{{list}}" wx:key="goods_id">
+    <view class="cart-item">
+      <!-- 图片 -->
+      <navigator class="cart-img">
+        <image mode="widthFix" src="{{item[0].goods_small_logo}}"></image>
+      </navigator>
+      <!-- 内容 -->
+      <view class="catr-wrap">
+        <view class="warp-name">{{item[0].goods_name}}</view>
+        <view class="warp-price-box">
+          <view class="warp-price">{{item[0].goods_price}}</view>
+          <!-- 数量 -->
+          <view class="price-inp">
+            <view class="inp-num">X{{item[0].num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 结算 -->
+<view class="foot">
+  <view class="all-price">
+    <view class="all-pic">
+      合计：<text>￥{{allPrice}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <view class="all-pay">
+    支付({{allNum}})
+  </view>
+</view>

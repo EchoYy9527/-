@@ -1,0 +1,62 @@
+<!-- 收货地址 -->
+<view class="address">
+  <view class="address-btn" wx:if="{{!address.userName}}">
+    <button type="primary" plain bindtap="address">收货地址</button>
+  </view>
+  <view wx:else class="add-box">
+    <view class="add-in">
+      <view>{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="add-ph">{{address.telNumber}}</view>
+  </view>
+</view>
+<!-- 购物车内容 -->
+<view class="cart-cont">
+  <view class="cart-tit">购物车</view>
+  <view class="cart-main" wx:for="{{list}}" wx:key="goods_id">
+    <view class="cart-item">
+      <!-- 复选框 -->
+      <view class="cart-inp">
+        <checkbox-group bindchange="change" data-id="{{item[0].goods_id}}">
+          <checkbox checked="item[0].check"></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 图片 -->
+      <navigator class="cart-img">
+        <image mode="widthFix" src="{{item[0].goods_small_logo}}"></image>
+      </navigator>
+      <!-- 内容 -->
+      <view class="catr-wrap">
+        <view class="warp-name">{{item[0].goods_name}}</view>
+        <view class="warp-price-box">
+          <view class="warp-price">{{item[0].goods_price}}</view>
+          <!-- 数量 -->
+          <view class="price-inp">
+            <view class="jian">-</view>
+            <view class="inp-num">{{item[0].num}}</view>
+            <view class="jia">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 结算 -->
+<view class="foot">
+  <view class="all-chk">
+    <checkbox-group>
+      <checkbox checked="{{all}}">全选</checkbox>
+    </checkbox-group>
+  </view>
+  <view class="all-price">
+    <view class="all-pic">
+      合计：<text>￥{{allPrice}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <view class="all-pay" bindtap="pay">
+    结算({{allNum}})
+  </view>
+</view>

@@ -1,0 +1,71 @@
+<view class="user">
+  <view class="user-img" wx:if="{{userinfo.avatarUrl}}">
+    <image class="img-b" src="{{userinfo.avatarUrl}}"></image>
+    <view class="user-in">
+      <image class="user-icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user-name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="user-btn" wx:else>
+    <navigator url="/pages/login/login">登录</navigator>
+  </view>
+</view>
+<!-- 内容 -->
+<view class="user-cont">
+  <view class="user-main">
+    <!-- 个人 -->
+    <view class="history">
+      <navigator>
+        <view class="his">0</view>
+        <view class="his-name">收藏的店铺</view>
+      </navigator>
+      <navigator>
+        <view class="his">0</view>
+        <view class="his-name">收藏的商品</view>
+      </navigator>
+      <navigator>
+        <view class="his">0</view>
+        <view class="his-name">关注的商品</view>
+      </navigator>
+      <navigator>
+        <view class="his">0</view>
+        <view class="his-name">我的足迹</view>
+      </navigator>
+    </view>
+    <!-- 订单 -->
+    <view class="order">
+      <view class="order-tit">我的订单</view>
+      <view class="order-cont">
+        <navigator>
+          <view class="iconfont icon-caidan"></view>
+          <view class="order-name">全部订单</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-caidan"></view>
+          <view class="order-name">待付款</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-caidan"></view>
+          <view class="order-name">待收货</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-caidan"></view>
+          <view class="order-name">退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 地址/客服 -->
+    <view class="address">
+      <view class="address-in">收货地址管理</view>
+      <view class="service">
+        <view class="service-in box">
+          <text>联系客服</text>
+          <text>400-618-4000</text>
+        </view>
+        <view class="service-in">意见反馈</view>
+        <view class="service-in">关于我们</view>
+      </view>
+    </view>
+    <view class="us">分享给其他人</view>
+  </view>
+</view>
